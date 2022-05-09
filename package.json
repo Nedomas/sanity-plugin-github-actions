@@ -1,0 +1,56 @@
+{
+  "name": "sanity-plugin-github-actions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "sanipack build",
+    "watch": "sanipack build --watch",
+    "prepublishOnly": "sanipack build && sanipack verify"
+  },
+  "repository": {},
+  "keywords": [
+    "sanity",
+    "sanity-plugin"
+  ],
+  "author": "Domas Bitvinskas <domas.bitvinskas@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sanity/icons": "^1.2.8",
+    "@sanity/ui": "^0.37.9",
+    "axios": "^0.27.2",
+    "nanoid": "^3.3.4",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "@sanity/base": "^2.29.8",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-sanity": "^6.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "prettier": "^2.6.2",
+    "sanipack": "^2.1.0"
+  },
+  "peerDependencies": {
+    "@sanity/base": "*",
+    "react": "^17.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 100,
+    "bracketSpacing": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "parser": "sanipack/babel/eslint-parser",
+    "extends": [
+      "sanity",
+      "sanity/react",
+      "prettier"
+    ],
+    "ignorePatterns": [
+      "lib/**/"
+    ]
+  }
+}
