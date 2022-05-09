@@ -9,7 +9,7 @@
     "watch": "sanipack build --watch",
     "prepublishOnly": "sanipack build && sanipack verify"
   },
-  "repository": {},
+  "repository": "github:Nedomas/sanity-plugin-github-actions",
   "keywords": [
     "sanity",
     "sanity-plugin"
